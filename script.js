@@ -4,10 +4,10 @@ const yesBtn = document.getElementById("yesBtn");
 
 const noResponses = [
     "Are you sure?",
-    "Are you really sure?",
+    "Pakka?",
     "Think again!",
     "Last chance...",
-    "Please reconsider 🥺",
+    "Sochleinn ek baar waisay",
     "You might regret this...",
     "Give it one more thought?",
     "I'm getting sad 😢",
@@ -37,7 +37,7 @@ noBtn.addEventListener("click", function() {
 
         // If No button has been clicked 10 times, make the Yes button full screen
         if (noClicks >= 10) {
-            yesBtn.innerText = "YESSSS! CLICK NOW!"; // Change Yes button text
+            yesBtn.innerText = "OKAYY FINALLY BAS YES!"; // Change Yes button text
             yesBtn.style.width = "100vw"; // Full width
             yesBtn.style.height = "100vh"; // Full height
             yesBtn.style.position = "fixed"; // Fix position
