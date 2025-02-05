@@ -37,7 +37,7 @@ noBtn.addEventListener("click", function() {
 
         // If No button has been clicked 10 times, make the Yes button full screen
         if (noClicks >= 10) {
-            yesBtn.innerText = "OKAYY FINALLY BAS YES!"; // Change Yes button text
+            yesBtn.innerText = "OKAYY FINALLY YESSS!"; // Change Yes button text
             yesBtn.style.width = "100vw"; // Full width
             yesBtn.style.height = "100vh"; // Full height
             yesBtn.style.position = "fixed"; // Fix position
