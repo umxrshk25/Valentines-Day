@@ -1,26 +1,28 @@
-let noClickCount = 0;
-const noResponses = [
-    "Are you sure?",
-    "Are you really sure?",
-    "Think again!",
-    "Last chance...",
-    "Please reconsider 🥺",
-    "You might regret this...",
-    "Give it one more thought?",
-    "I'm getting sad 😢",
-    "Don't break my heart 💔",
-    "You HAVE to say yes now!"
-];
+let noClicks = 0;
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
 
-document.getElementById("yesBtn").addEventListener("click", function() {
-    alert("Yay! I knew you'd say yes! ❤️");
+noBtn.addEventListener("click", function() {
+    noClicks++;
+    yesBtn.style.fontSize = `${1 + noClicks * 2}rem`;
+    yesBtn.style.padding = `${0.5 + noClicks * 1}rem ${1 + noClicks * 2}rem`;
+    if (noClicks >= 10) {
+        yesBtn.innerText = "YESSSS! CLICK NOW!";
+        yesBtn.style.width = "100vw";
+        yesBtn.style.height = "100vh";
+        yesBtn.style.position = "fixed";
+        yesBtn.style.top = "0";
+        yesBtn.style.left = "0";
+        yesBtn.style.display = "flex";
+        yesBtn.style.alignItems = "center";
+        yesBtn.style.justifyContent = "center";
+    }
 });
 
-document.getElementById("noBtn").addEventListener("click", function() {
-    noClickCount++;
-    
-    if (noClickCount <= 10) {
-        this.textContent = noResponses[noClickCount - 1]; // Change No button text
-        document.getElementById("yesBtn").style.fontSize = (16 + noClickCount * 5) + "px"; // Increase Yes button size
+yesBtn.addEventListener("click", function() {
+    if (noClicks >= 10) {
+        window.location.href = "final.html";
+    } else {
+        window.location.href = "love.html";
     }
 });
