@@ -17,7 +17,12 @@ const noResponses = [
 
 // Yes button click event
 yesBtn.addEventListener("click", function() {
-    window.location.href = "love.html"; // Redirects to Love Page
+    // Check if the "Yes" button is in full screen mode
+    if (noClicks >= 10) {
+        window.location.href = "final.html"; // Redirect to final.html if full screen
+    } else {
+        window.location.href = "love.html"; // Otherwise, redirect to love.html
+    }
 });
 
 // No button click event
